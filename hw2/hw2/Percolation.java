@@ -34,9 +34,9 @@ public class Percolation {
 
         nthSitesFromBottom = new WeightedQuickUnionUF(N * N);
         for (int i = 0; i < N - 1; i += 1) {
-            nthSitesFromTop.union(i, i + 1);
+            nthSitesFromBottom.union(i, i + 1);
         }
-        for (int i = N * N - N; i < N * N - N - 1; i += 1) {
+        for (int i = N * N - N; i < N * N - 1; i += 1) {
             nthSitesFromBottom.union(i, i + 1);
         }
     }
@@ -68,7 +68,6 @@ public class Percolation {
 
         for(int neighbor : neighbors) {
             if(isOpen(neighbor)) {
-                //nthSites.union(ithSite, neighbor);
                 nthSitesFromTop.union(ithSite, neighbor);
                 nthSitesFromBottom.union(ithSite, neighbor);
             }
@@ -172,7 +171,7 @@ public class Percolation {
     }
     /** If the system percolate. */
     public boolean percolates() {
-        return nthSitesFromBottom.connected(0, N*N-1);
+        return nthSitesFromBottom.connected(0, N*N-1) ;
     }
 
 }
