@@ -41,7 +41,7 @@ public class PlayGameByKeyboard {
                 //System.out.println("The player moves to (" + newPlayerP.x + ", " + newPlayerP.y + ").");
                 return newPlayerP;
             } else {
-                System.out.println("The player can't move!");
+                //System.out.println("The player can't move!");
                 return player;
             }
         }
@@ -78,7 +78,7 @@ public class PlayGameByKeyboard {
                 //System.out.println("The player moves to (" + newPlayerP.x + ", " + newPlayerP.y + ").");
                 return newPlayerP;
             } else {
-                System.out.println("The player can't move!");
+                //System.out.println("The player can't move!");
                 return player;
             }
         } else { // 'D'
@@ -94,7 +94,7 @@ public class PlayGameByKeyboard {
                 //System.out.println("The player moves to (" + newPlayerP.x + ", " + newPlayerP.y + ").");
                 return newPlayerP;
             } else {
-                System.out.println("The player can't move!");
+                //System.out.println("The player can't move!");
                 return player;
             }
         }

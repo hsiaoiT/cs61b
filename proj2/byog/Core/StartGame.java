@@ -103,7 +103,8 @@ public class StartGame {
                 if (world[playerStart.x][playerStart.y].equals(Tileset.UNLOCKED_DOOR)) {
                     StdDraw.pause(1000);
                     //System.out.println("Finished Game!");
-                    drawFrame("SUCCEED!!");
+                    succeed();
+                    //drawFrame("SUCCEED!!");
 
                     break;
                 }
@@ -183,5 +184,24 @@ public class StartGame {
         drawFrame("Game Over!");
     }
 
+    private void succeed() {
+        StdDraw.setCanvasSize(WIDTH * TILE_SIZE, HEIGHT * TILE_SIZE);
+        Font font = new Font("Monaco", Font.BOLD, 30);
+        StdDraw.setFont(font);
+        StdDraw.setXscale(0, this.WIDTH);
+        StdDraw.setYscale(0, this.HEIGHT);
+
+        StdDraw.clear(new Color(0, 0, 0));
+
+        StdDraw.clear(Color.BLACK);
+        StdDraw.enableDoubleBuffering();
+
+        /** CS61B: THE Game */
+        Font bigFont = new Font("Monaco", Font.BOLD, 30);
+        StdDraw.setFont(bigFont);
+        StdDraw.setPenColor(Color.white);
+        StdDraw.text(WIDTH/2, HEIGHT/2+1, "Congrats! You succeed!");
+        StdDraw.show();
+    }
 
 }
